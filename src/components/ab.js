@@ -1,33 +1,48 @@
-const About=()=>{
-    return(
-        <>
-        import React from 'react';
+import React from 'react';
+import "bootstrap/dist/css/bootstrap.min.css";
 
+const About = () => {
+  return (
+    <div className="container mt-4">
+      <h1 className="text-primary">About</h1>
 
-    <div>
-      <h2>About Us</h2>
-      <p>Welcome to our food website! We are passionate about bringing delicious and nutritious meals to your table.</p>
+      <div className="row">
+        <div className="col-md-6">
+          <h3 className="text-info">Our Service</h3>
+          <p>
+            Our mission is to provide high-quality food Recipes serve, as a starting point for culinary creativity.
+             While they provide a structured framework of ingredients and instructions, you can always add your
+              personal touch to make a dish truly unique. Feel free to experiment with different flavors, spices,
+               and techniques to tailor the recipe to your taste.
+          </p>
+        </div>
 
-      <h3>Our Mission</h3>
-      <p>At [Your Food Website Name], our mission is to provide a wide variety of high-quality recipes, cooking tips, and culinary inspiration to food enthusiasts of all levels. We believe that everyone deserves to enjoy good food and learn how to prepare it with confidence.</p>
+        <div className="col-md-6">
+          <h3 className="text-info">Our Vision</h3>
+          <p>
+          Remember, while recipes are valuable guidelines, don't be afraid to experiment and make
+           adjustments based on your taste preferences. Enjoy the process of cooking, and let your 
+          creativity and passion shine through as you explore the wonderful world of food recipes.
+          </p>
+        </div>
+      </div>
 
-      <h3>Our Team</h3>
-      <p>We are a team of experienced chefs, nutritionists, and food lovers who share a common goal of sharing our culinary expertise with you. Our diverse backgrounds and expertise allow us to create content that caters to different tastes, dietary preferences, and skill levels.</p>
+      <button className="btn btn-primary mt-4" type="button" data-toggle="collapse" data-target="#collapseDetails" aria-expanded="false" aria-controls="collapseDetails">
+        More Details
+      </button>
 
-      <h3>What We Offer</h3>
-      <p>On our website, you'll find a vast collection of recipes ranging from quick and easy weeknight meals to gourmet dishes for special occasions. We also provide step-by-step cooking instructions, ingredient lists, and helpful tips to make your cooking experience enjoyable and successful.</p>
-
-      <h3>Community</h3>
-      <p>We believe that food brings people together. Join our vibrant community of food enthusiasts where you can share your own recipes, ask questions, and connect with like-minded individuals who are passionate about cooking and eating delicious food.</p>
-
-      <h3>Contact Us</h3>
-      <p>If you have any questions, feedback, or suggestions, we would love to hear from you. You can reach us by filling out the contact form on our website or by sending an email to [email protected]</p>
-
-      <p>Thank you for visiting our website and we hope you enjoy exploring our delicious recipes!</p>
+      <div className="collapse mt-3" id="collapseDetails">
+        <div className="card card-body bg-light">
+          <h3 className="text-info">Additional Details</h3>
+          <p>
+          Recipes enable us to replicate our favorite dishes from restaurants or recreate the flavors from our
+           travels. They provide a detailed roadmap, ensuring that you can enjoy a particular dish anytime you desire.
+           Following a recipe allows you to capture the essence of a meal and bring it into your own kitchen.
+          </p>
+        </div>
+      </div>
     </div>
-  
+  );
+};
 
-        </>
-    )
-}
 export default About;

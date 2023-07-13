@@ -1,46 +1,47 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-const Menu = () => {
-  const menuItems = [
+const MenuPage = () => {
+  // Assuming you have an array of recipes
+  const recipes = [
     {
-      name: 'Cheeseburger',
-      price: '$9.99',
-    },
-    {
-      name: 'Margherita Pizza',
-      price: '$12.99',
-    },
-    {
-      name: 'Grilled Chicken Salad',
-      price: '$8.99',
-    },
-    {
+      id: 1,
       name: 'Pasta Carbonara',
-      price: '$11.99',
+      description: 'Creamy pasta with bacon and eggs',
+      image: '../Image/OIP.jpg',
     },
     {
-      name: 'Fish and Chips',
-      price: '$10.99',
+      id: 2,
+      name: 'Chicken Curry',
+      description: 'Spicy curry with tender chicken',
+      image: '../Image/OIP.jpg',
     },
     {
+      id: 3,
       name: 'Vegetable Stir-Fry',
-      price: '$9.49',
+      description: 'Colorful stir-fried vegetables',
+      image: '../Image/OIP (1).jpg',
     },
+    // Add more recipes as needed
   ];
 
   return (
     <div>
-      <h2>Menu</h2>
-      <ul>
-        {menuItems.map((item, index) => (
-          <li key={index}>
-            <span>{item.name}</span>
-            <span>{item.price}</span>
-          </li>
+      <h1>Menu</h1>
+      <div className="recipe-grid">
+        {recipes.map((recipe) => (
+          <div className="recipe-card" key={recipe.id}>
+            <img src={recipe.image} alt={recipe.name} className="recipe-image" />
+            <div className="recipe-details">
+              <h2>{recipe.name}</h2>
+              <p>{recipe.description}</p>
+              <Link to={`/recipe/${recipe.id}`} className="view-recipe">View Recipe</Link>
+            </div>
+          </div>
         ))}
-      </ul>
+      </div>
     </div>
   );
-}
+};
 
-export default Menu;
+export default MenuPage;

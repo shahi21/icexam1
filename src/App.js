@@ -1,33 +1,27 @@
-import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import React from 'react'
+import "bootstrap/dist/css/bootstrap.min.css"
+
 import Home from './components/home';
 import About from './components/ab';
-import Menu from './components/menu';
-import Navbar from './components/Navbarpage';
-import { BrowserRouter, Routes } from "react-router-dom";
-import "bootstrap/dist/js/bootstrap.bundle"
-import "bootstrap"
+import Menu from './Components/menu';
+import {BrowserRouter, Routes, Route} from "react-router-dom";
+import Navbar from './Components/Navbarpage';
 
-const App = () => {
-  return (
-    <Router>
-      <div>
-        {/* Header */}
-        {/* Include your header component here */}
-
-        {/* Content */}
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route path="/about" component={About} />
-          <Route path="/menu" component={Menu} />
-          <Route path="/Navbarpage" component={Navbar}/>
-        </Switch>
-
-        {/* Footer */}
-        {/* Include your footer component here */}
-      </div>
-    </Router>
+function App(){
+  return(
+    <>
+    {/* <h1 classname="bg-primary">React</h1>
+    <p>This is a paragraph</p> */}
+    <BrowserRouter>
+    <Navbar/>
+    <Routes>
+      <Route path ="/" element={<Home/>}/>
+      <Route path ="/about" element={<About/>}/>
+      <Route path ="/navbar" element={<NavbarPage/>}/>
+      <Route path ="/menu" element={<Menu/>}/>
+      </Routes>
+      </BrowserRouter>
+    </>
   );
 }
-
 export default App;
