@@ -7,7 +7,7 @@ import "bootstrap/dist/js/bootstrap.bundle.min.js"; // Add this line
 const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div className="container">
+      <div className="container"> 
         <Link className="navbar-brand" to="/">
           <img src="https://st2.depositphotos.com/1378583/5228/v/600/depositphotos_52283153-stock-illustration-hand-book-logo.jpg" alt="Logo" className="navbar-logo" />
         </Link>
